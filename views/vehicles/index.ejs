@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Vehicles</title>
+</head>
+<body>
+    <h1>All Vehicles</h1>
+    <a href="/vehicles/new" class="create">Add a vehicle</a>
+    <ul>
+        <% vehicleDocs.forEach(vehicle => { %>
+         <li>
+            <a href="/vehicles/<%= vehicle._id %>">
+                Model: <%= vehicle.model.toUpperCase() %>
+                Year: <%= vehicle.year %>
+            </a>
+         </li>
+        <% }) %>
+</body>
+</html>
